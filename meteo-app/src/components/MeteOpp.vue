@@ -1,6 +1,6 @@
 <!-- src/components/Meteo.vue -->
 <template>
-    <div v-if="meteo ">
+    <div v-if="meteo && meteo.main && meteo.weather">
       <p>📍 Ville : {{ meteo.name }}</p>
       <p>🌡️ Température : {{ meteo.main.temp }} °C</p>
       <p>🌥️ Météo : {{ meteo.weather[0].description }}</p>
@@ -15,7 +15,7 @@
   
   <script>
   export default {
-    name: "MeteOpp",
+    name: "Meteo",
     props: {
       meteo: Object
     }
